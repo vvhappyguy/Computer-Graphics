@@ -1,5 +1,4 @@
 #define GL_SILENCE_DEPRECATION
-#include <stdio.h>
 #include <math.h>
 #include <GLUT/glut.h>
 #define PI 3.1415926535898
@@ -121,7 +120,7 @@ int main(int argc, char **argv)
     glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
     glutInitWindowPosition(500, 200);
     glutInitWindowSize(600, 600);
-    glutCreateWindow( "Main window" );
+    glutCreateWindow("First Lab");
     init();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
