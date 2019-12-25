@@ -48,6 +48,11 @@ void drawHouse()
         glVertex2f(200.0, 250.0);
         glVertex2f(200.0, 100.0);
     glEnd();
+   
+}
+
+void drawRoof()
+{
     if(isNight)
         glColor3f(0.25, 0.2, 0.0);
     else
@@ -57,7 +62,6 @@ void drawHouse()
         glVertex2f(125.0, 350.0);
         glVertex2f(225.0, 250.0);
     glEnd();
-    
 }
 
 void drawSun()
@@ -94,6 +98,7 @@ void display()
     drawGrass();
     drawSky();
     drawHouse();
+    drawRoof();
     drawSun();
     glFlush();
 }
