@@ -5,7 +5,7 @@
 GLint circlePoints=100;
 GLint sizeOfSun = 50;
 bool isNight = false;
-GLint sunPosX = 500;
+GLint sunPosX = 50;
 GLint sunPosY = 500;
 
 
@@ -96,9 +96,9 @@ void drawSun()
 void move ()
 {
     glutPostRedisplay();
-    sunPosX-=10;
-    if (sunPosX < -50) {
-        sunPosX = 649;
+    sunPosX+=10;
+    if (sunPosX > 650) {
+        sunPosX = -50;
         if (isNight)
             isNight = false;
         else
@@ -118,7 +118,6 @@ void display()
     drawSun();
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_COLOR_ARRAY);
-
     glFlush();
 }
 
