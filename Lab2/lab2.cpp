@@ -88,7 +88,7 @@ void drawSun()
         for(GLint i = 0; i < circlePoints; i++)
         {
             GLdouble ang = PI * 2 / circlePoints * i;
-            glVertex2d(sizeOfSun * sin(ang) + sunPosX, sizeOfSun * cos(ang) + sunPosY);
+            glVertex2f(sizeOfSun * sin(ang) + sunPosX, sizeOfSun * cos(ang) + sunPosY);
         }
     glEnd();
 }

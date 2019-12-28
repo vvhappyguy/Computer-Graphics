@@ -36,7 +36,7 @@ void drawSky()
     glEnd();
 }
 
-void drawHouse()
+void drawHouseFrame()
 {
     if(isNight)
         glColor3f(0.2, 0.1, 0.0);
@@ -64,7 +64,21 @@ void drawRoof()
     glEnd();
 }
 
-void drawSun()
+void drawWindow()
+{
+   if(isNight)
+        glColor3f(1.0, 1.0, 0.0);
+    else
+        glColor3f(0.0, 0.5, 0.75);
+    glBegin(GL_QUADS);
+        glVertex2f(100.0, 150.0);
+        glVertex2f(100.0, 190.0);
+        glVertex2f(150.0, 190.0);
+        glVertex2f(150.0, 150.0);
+    glEnd(); 
+}
+
+void drawLightObj()
 {
     if(isNight)
         glColor3f(1.0, 1.0, 1.0);
@@ -74,7 +88,7 @@ void drawSun()
         for(GLint i = 0; i < circlePoints; i++)
         {
             GLdouble ang = PI * 2 / circlePoints * i;
-            glVertex2d(sizeOfSun * sin(ang) + sunPosX, sizeOfSun * cos(ang) + sunPosY);
+            glVertex2f(sizeOfSun * sin(ang) + sunPosX, sizeOfSun * cos(ang) + sunPosY);
         }
     glEnd();
 }
@@ -85,10 +99,7 @@ void move ()
     sunPosX+=10;
     if (sunPosX > 650) {
         sunPosX = -50;
-        if (isNight)
-            isNight = false;
-        else
-            isNight = true;
+        isNight = !isNight;
     }
 }
 
@@ -97,9 +108,10 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
     drawGrass();
     drawSky();
-    drawHouse();
+    drawHouseFrame();
     drawRoof();
-    drawSun();
+    drawWindow();
+    drawLightObj();
     glFlush();
 }
 
