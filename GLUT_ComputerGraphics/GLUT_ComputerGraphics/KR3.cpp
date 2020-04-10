@@ -1,8 +1,8 @@
-﻿/*
-	KR1 - Пружина
-	KR2 - Шарики
-*/
-
+﻿///*
+//	KR1 - Пружина
+//	KR2 - Шарики
+//*/
+//
 //#include <iostream>
 //#include <vector>
 //#include <GL/freeglut.h>

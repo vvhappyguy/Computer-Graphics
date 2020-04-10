@@ -143,20 +143,20 @@
 //	}
 //}
 //
-////int main(int argc, char* argv[])
-////{
-////	glutInit(&argc, argv);
-////	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-////	glutInitWindowSize(WINDOW_HEIGHT, WINDOW_WIDTH);
-////	glutCreateWindow("SPRING");
-////	glutDisplayFunc(display);
-////	init();
-////
-////	glutKeyboardFunc(spaceKey);
-////	glutTimerFunc(50, timer, 0);
-////
-////	glutReshapeFunc(reshape);
-////	glutMainLoop();
-////
-////	return 0;
-////}
+//int main(int argc, char* argv[])
+//{
+//	glutInit(&argc, argv);
+//	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+//	glutInitWindowSize(WINDOW_HEIGHT, WINDOW_WIDTH);
+//	glutCreateWindow("SPRING");
+//	glutDisplayFunc(display);
+//	init();
+//
+//	glutKeyboardFunc(spaceKey);
+//	glutTimerFunc(50, timer, 0);
+//
+//	glutReshapeFunc(reshape);
+//	glutMainLoop();
+//
+//	return 0;
+//}
