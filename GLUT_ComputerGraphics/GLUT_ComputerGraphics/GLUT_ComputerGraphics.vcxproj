@@ -143,7 +143,7 @@
     <ClCompile Include="KR1.cpp" />
     <ClCompile Include="KR2.cpp" />
     <ClCompile Include="Lab1\L1.cpp" />
-    <ClCompile Include="Lab2\lab2.cpp" />
+    <ClCompile Include="Lab2\L2.cpp" />
     <ClCompile Include="Lab3\LabFull.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="KR3.cpp" />
