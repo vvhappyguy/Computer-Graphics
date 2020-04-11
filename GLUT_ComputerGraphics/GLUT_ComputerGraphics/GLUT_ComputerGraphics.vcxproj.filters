@@ -13,18 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="_">
+      <UniqueIdentifier>{65e2afb0-8e79-4462-8460-2b857656e9da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KR1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KR2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KR3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Lab3\LabFull.cpp">
@@ -35,6 +29,15 @@
     </ClCompile>
     <ClCompile Include="Lab2\L2.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KR3.cpp">
+      <Filter>_</Filter>
+    </ClCompile>
+    <ClCompile Include="KR1.cpp">
+      <Filter>_</Filter>
+    </ClCompile>
+    <ClCompile Include="KR2.cpp">
+      <Filter>_</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
