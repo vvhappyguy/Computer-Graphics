@@ -16,7 +16,7 @@ GLfloat dx_rotation = 0.5;
 GLfloat oy_rotation = 0;
 GLfloat dy_rotation = 0;
 bool visibility = true;
-GLint opened = 0;
+GLfloat opened = 0;
 GLfloat octTranslateZ = -5;
 void draw_colored_oct();
 
@@ -109,7 +109,7 @@ int main(int argc, char** argv)
 	glutReshapeFunc(reshape);
 	glutTimerFunc(5, TimerFunction, 0.5);
 	glutKeyboardFunc(glutNormalKeys);
-
+		
 	// Light Init
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
@@ -485,7 +485,7 @@ void glutNormalKeys(unsigned char key, int x, int y)
 		break;
 	case KEY::OPEN_OCT:
 		if (!opened)
-			opened = 1;
+			opened = 0.2;
 		else
 			opened = 0;
 		break;
