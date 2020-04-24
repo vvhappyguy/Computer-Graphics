@@ -158,6 +158,9 @@
     <Image Include="Lab3\tex6.bmp" />
     <Image Include="Lab3\tex7.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lab2_ver_array.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

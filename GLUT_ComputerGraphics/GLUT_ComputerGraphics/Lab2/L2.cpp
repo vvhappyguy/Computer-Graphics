@@ -1,85 +1,11 @@
 //#define GL_SILENCE_DEPRECATION
 //#include <math.h>
-//#include <GL/glut.h>
-//#define PI 3.1415926535898
-//GLint circlePoints = 100;
-//GLint sizeOfSun = 50;
-//bool isNight = false;
-//GLint sunPosX = 50;
-//GLint sunPosY = 500;
+//#include "..\Lab2_ver_array.h"
 //
-//
-//static GLfloat vertices[] =
-//{
-//	0.0, 0.0, //grass
-//	0.0, 300.0,
-//	600.0, 300.0,
-//	600.0, 0.0,
-//
-//	0.0, 300.0, //sky
-//	0.0, 600.0,
-//	600.0, 600.0,
-//	600.0, 300.0,
-//
-//	50.0, 100.0, //house
-//	50.0, 250.0,
-//	200.0, 250.0,
-//	200.0, 100.0,
-//
-//	25.0, 250.0, //roof
-//	125.0, 350.0,
-//	225.0, 250.0
-//
-//};
-//
-//static GLfloat nightColor[] =
-//{
-//	0.0, 0.5, 0.0, //grass
-//	0.0, 0.5, 0.0,
-//	0.0, 0.5, 0.0,
-//	0.0, 0.5, 0.0,
-//
-//	0.0, 0.1, 0.2, //sky
-//	0.0, 0.1, 0.2,
-//	0.0, 0.1, 0.2,
-//	0.0, 0.1, 0.2,
-//
-//	0.2, 0.1, 0.0, //house
-//	0.2, 0.1, 0.0,
-//	0.2, 0.1, 0.0,
-//	0.2, 0.1, 0.0,
-//
-//	0.25, 0.2, 0.0, //roof
-//	0.25, 0.2, 0.0,
-//	0.25, 0.2, 0.0,
-//	0.25, 0.2, 0.0
-//};
-//
-//static GLfloat dayColor[] =
-//{
-//	0.0, 0.9, 0.0, //grass
-//	0.0, 0.9, 0.0,
-//	0.0, 0.9, 0.0,
-//	0.0, 0.9, 0.0,
-//
-//	0.0, 1.0, 1.0, //sky
-//	0.0, 1.0, 1.0,
-//	0.0, 1.0, 1.0,
-//	0.0, 1.0, 1.0,
-//
-//	0.4, 0.2, 0.0, //house
-//	0.4, 0.2, 0.0,
-//	0.4, 0.2, 0.0,
-//	0.4, 0.2, 0.0,
-//
-//	0.5, 0.4, 0.0, //roof
-//	0.5, 0.4, 0.0,
-//	0.5, 0.4, 0.0,
-//	0.5, 0.4, 0.0
-//};
 //
 //void drawSun()
 //{
+//	// add drawLightObj func
 //	if (isNight)
 //		glColor3f(1.0, 1.0, 1.0);
 //	else
@@ -97,34 +23,31 @@
 //{
 //	glutPostRedisplay();
 //	sunPosX += 1;
-//	if (sunPosX > 650) {
+//	if (sunPosX > windowWidth + sizeOfSun) {
 //		sunPosX = -50;
-//		if (isNight)
-//			isNight = false;
-//		else
-//			isNight = true;
+//		isNight = !isNight;		
 //	}
 //}
 //
 //void display()
 //{
 //	glClear(GL_COLOR_BUFFER_BIT);
-//	glEnableClientState(GL_VERTEX_ARRAY);
-//	glEnableClientState(GL_COLOR_ARRAY);
+//	
 //	glVertexPointer(2, GL_FLOAT, 0, vertices);
 //	glColorPointer(3, GL_FLOAT, 0, (isNight) ? nightColor : dayColor);
 //	glDrawArrays(GL_QUADS, 0, 12);
 //	glDrawArrays(GL_TRIANGLES, 12, 3);
 //	drawSun();
-//	glDisableClientState(GL_VERTEX_ARRAY);
-//	glDisableClientState(GL_COLOR_ARRAY);
+//	//glDisableClientState(GL_VERTEX_ARRAY);
+//	//glDisableClientState(GL_COLOR_ARRAY);
 //	glFlush();
 //}
 //
 //void reshape(int Width, int Height)
 //{
-//	if (Height == 0)
-//		Height = 1;
+//	::windowHeight = Height;
+//	::windowWidth = Width;
+//	::sunPosY = windowWidth - sizeOfSun - sunUpOffset;
 //	glViewport(0, 0, (GLint)Width, (GLint)Height);
 //	glMatrixMode(GL_PROJECTION);
 //	glLoadIdentity();
@@ -135,6 +58,8 @@
 //void init()
 //{
 //	glClearColor(1.0, 1.0, 1.0, 1.0);
+//	glEnableClientState(GL_VERTEX_ARRAY);
+//	glEnableClientState(GL_COLOR_ARRAY);
 //}
 //
 //int main(int argc, char** argv)
@@ -142,8 +67,8 @@
 //	glutInit(&argc, argv);
 //	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
 //	glutInitWindowPosition(500, 200);
-//	glutInitWindowSize(600, 600);
-//	glutCreateWindow("First Lab");
+//	glutInitWindowSize(windowWidth, windowHeight);
+//	glutCreateWindow("Second Lab");
 //	init();
 //	glutDisplayFunc(display);
 //	glutReshapeFunc(reshape);
